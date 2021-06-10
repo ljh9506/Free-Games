@@ -1,28 +1,23 @@
-import { ReactElement, useEffect, useState } from 'react';
-import axios from 'axios';
-import { Game } from '../../types/index';
+import { ChangeEvent, ReactElement, useCallback, useState } from 'react';
 import GameCard from '../GameCard';
-import { API_KEY, API_HOST } from './constants';
 import { List, ListItem } from './styles/GameList';
+import { Filter } from './types';
+import GameFilter from '../GameFilter';
+import useFetch from '../../hooks/useFetch';
 
 const GameList = (): ReactElement => {
-  const [games, setGames] = useState<Game[]>([]);
-  const [err, setErr] = useState<string>('');
+  const [filter, setFilter] = useState<Filter>({
+    platform: 'browser',
+    sortBy: 'relevance',
+  });
+  const { games, err } = useFetch(filter);
 
-  useEffect(() => {
-    axios
-      .get('/games', {
-        baseURL: `https://${API_HOST}/api`,
-        headers: {
-          'x-rapidapi-key': API_KEY,
-          'x-rapidapi-host': API_HOST,
-        },
-        params: {
-          platform: 'browser',
-        },
-      })
-      .then((res) => setGames(res.data))
-      .catch((e) => setErr(e.message));
+  const onFilterChange = useCallback((e: ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFilter((current) => ({
+      ...current,
+      [e.target.name]: e.target.value,
+    }));
   }, []);
 
   if (err) {
@@ -33,13 +28,16 @@ const GameList = (): ReactElement => {
   }
 
   return (
-    <List>
-      {games?.map((game) => (
-        <ListItem key={game.id}>
-          <GameCard content={game} />
-        </ListItem>
-      ))}
-    </List>
+    <>
+      <GameFilter onFilterChange={onFilterChange} />
+      <List>
+        {games?.map((game) => (
+          <ListItem key={game.id}>
+            <GameCard content={game} key={game?.id} />
+          </ListItem>
+        ))}
+      </List>
+    </>
   );
 };
 

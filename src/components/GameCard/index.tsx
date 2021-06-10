@@ -12,23 +12,25 @@ import {
   WindowsIcon,
 } from './styles/GameCard';
 
-interface Props {
+type Props = {
   content: Game;
-}
+};
 
 const GameCard = ({ content }: Props): ReactElement => {
   /* eslint-disable camelcase */
   const { id, title, thumbnail, short_description, genre, platform } = content;
+
+  console.log(content);
 
   const icons = platform.split(',').map((p) => {
     let icon = null;
 
     switch (p.trim()) {
       case 'PC (Windows)':
-        icon = <WindowsIcon />;
+        icon = <WindowsIcon key={p.trim()} />;
         break;
       case 'Web Browser':
-        icon = <BrowserIcon />;
+        icon = <BrowserIcon key={p.trim()} />;
         break;
       default:
         break;
