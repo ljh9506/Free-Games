@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Game } from '../../types/index';
 import GameCard from '../GameCard';
 import { API_KEY, API_HOST } from './constants';
+import { List, ListItem } from './styles/GameList';
 
 const GameList = (): ReactElement => {
   const [games, setGames] = useState<Game[]>([]);
@@ -32,13 +33,13 @@ const GameList = (): ReactElement => {
   }
 
   return (
-    <ul>
+    <List>
       {games?.map((game) => (
-        <li key={game.id}>
+        <ListItem key={game.id}>
           <GameCard content={game} />
-        </li>
+        </ListItem>
       ))}
-    </ul>
+    </List>
   );
 };
 

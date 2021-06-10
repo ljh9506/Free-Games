@@ -1,5 +1,6 @@
 import { ReactElement } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/Header';
 import GlobalStyles from './GlobalStyles';
 import Home from './pages/Home';
 
@@ -8,6 +9,7 @@ const App = (): ReactElement => {
     <>
       <GlobalStyles />
       <BrowserRouter>
+        <Header />
         <Switch>
           <Route path="/">
             <Home />

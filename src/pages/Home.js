@@ -2,9 +2,9 @@ import GameList from '../components/GameList';
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <GameList />
-    </div>
+    </main>
   );
 };
 

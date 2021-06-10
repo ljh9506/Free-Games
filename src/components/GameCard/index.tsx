@@ -1,6 +1,16 @@
 import { ReactElement } from 'react';
-import { Link } from 'react-router-dom';
 import { Game } from '../../types/index';
+import {
+  BrowserIcon,
+  Description,
+  Details,
+  Genre,
+  IconContainer,
+  Img,
+  StyledLink,
+  Title,
+  WindowsIcon,
+} from './styles/GameCard';
 
 interface Props {
   content: Game;
@@ -8,16 +18,36 @@ interface Props {
 
 const GameCard = ({ content }: Props): ReactElement => {
   /* eslint-disable camelcase */
-  const { id, title, thumbnail, short_description, genre } = content;
+  const { id, title, thumbnail, short_description, genre, platform } = content;
+
+  const icons = platform.split(',').map((p) => {
+    let icon = null;
+
+    switch (p.trim()) {
+      case 'PC (Windows)':
+        icon = <WindowsIcon />;
+        break;
+      case 'Web Browser':
+        icon = <BrowserIcon />;
+        break;
+      default:
+        break;
+    }
+
+    return icon;
+  });
 
   const link = `/game/${id}`;
   return (
-    <Link to={link}>
-      <img alt={title} src={thumbnail} />
-      <h2>{title}</h2>
-      <p>{short_description}</p>
-      <p>{genre}</p>
-    </Link>
+    <StyledLink to={link}>
+      <Img alt={title} src={thumbnail} />
+      <Details>
+        <Title>{title}</Title>
+        <Description>{short_description}</Description>
+        <Genre>{genre}</Genre>
+        <IconContainer>{icons}</IconContainer>
+      </Details>
+    </StyledLink>
   );
 };
 
