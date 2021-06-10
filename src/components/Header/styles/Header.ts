@@ -5,6 +5,10 @@ import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+type PropType = {
+  isOpen?: boolean;
+};
+
 export const Nav = styled.nav`
   background-color: #272a46;
 `;
@@ -21,7 +25,7 @@ export const NavbarContainer = styled.div`
 export const MobileIcon = styled(FaBars)`
   display: none;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1052px) {
     display: block;
     position: absolute;
     right: 24px;
@@ -46,7 +50,7 @@ export const ListContainer = styled.ul`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1052px) {
     display: none;
   }
 `;
@@ -71,7 +75,7 @@ export const DropdownMenu = styled.div`
   position: absolute;
   top: 48px;
 
-  display: ${({ isOpen }: never) => (isOpen ? 'flex' : 'none')};
+  display: ${({ isOpen }: PropType) => (isOpen ? 'flex' : 'none')};
   flex-direction: column;
   align-items: center;
 `;
@@ -106,7 +110,7 @@ export const FuncContainer = styled.ul`
   display: flex;
   margin-left: auto;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1052px) {
     display: none;
   }
 `;

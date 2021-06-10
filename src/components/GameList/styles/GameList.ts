@@ -4,11 +4,12 @@ import { breakpoints } from '../../../styles/breakpoints';
 export const List = styled.ul`
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 0.1fr);
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 0;
+  padding: 0 22px;
   list-style-type: none;
   box-sizing: border-box;
 
