@@ -10,7 +10,7 @@ const GameList = (): ReactElement => {
     platform: 'browser',
     sortBy: 'relevance',
   });
-  const { games, err } = useFetch(filter);
+  const { games, err, isLoading } = useFetch(filter);
 
   const onFilterChange = useCallback((e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,13 +23,10 @@ const GameList = (): ReactElement => {
   if (err) {
     return <p>Unable to fetch games</p>;
   }
-  if (!games.length) {
-    return <p>No games available</p>;
-  }
 
   return (
     <>
-      <GameFilter onFilterChange={onFilterChange} />
+      <GameFilter onFilterChange={onFilterChange} isLoading={isLoading} />
       <List>
         {games?.map((game) => (
           <ListItem key={game.id}>
