@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+type Props = {
+  clicked: number;
+};
+
 export const PageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -12,7 +16,7 @@ export const PageWrapper = styled.div``;
 
 export const Page = styled(Link)`
   text-decoration: none;
-  color: #aaaaaa;
   padding: 18px;
   font-size: 28px;
+  color: ${({ clicked }: Props) => (clicked ? '#111' : '#aaaaaa')};
 `;
