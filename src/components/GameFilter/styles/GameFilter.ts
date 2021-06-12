@@ -29,6 +29,15 @@ export const Label = styled.label`
 
 export const Select = styled.select`
   width: 100%;
+  height: 30px;
+  margin-top: 0;
+  color: white;
+  background-color: ${backgroundColor};
+`;
+
+export const Option = styled.option`
+  width: 100%;
+  height: 30px;
   margin-top: 0;
   color: white;
   background-color: ${backgroundColor};

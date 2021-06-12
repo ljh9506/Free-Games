@@ -30,15 +30,15 @@ const Header = () => {
       <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       <Nav>
         <NavbarContainer>
-          <NavbarLogo to="/">
+          <NavbarLogo to="/game">
             <Logo src={logo} />
           </NavbarLogo>
 
           <ListContainer>
-            <List>Game List</List>
-            <List>Special Offers</List>
-            <List>Top 2021</List>
-            <List>
+            <List to="/game">Game List</List>
+            <List to="/game">Special Offers</List>
+            <List to="/game">Top 2021</List>
+            <List as="li" to="/game">
               <Dots
                 onClick={() => {
                   setIsOpen(!isOpen);

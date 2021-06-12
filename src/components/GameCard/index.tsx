@@ -20,8 +20,6 @@ const GameCard = ({ content }: Props): ReactElement => {
   /* eslint-disable camelcase */
   const { id, title, thumbnail, short_description, genre, platform } = content;
 
-  console.log(content);
-
   const icons = platform.split(',').map((p) => {
     let icon = null;
 

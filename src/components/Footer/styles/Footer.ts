@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const FooterWrapper = styled.footer`
   width: 100%;
   height: 120px;
-  background-color: #272b4b;
+  background-color: #1c1e22;
 `;
 
 export const FooterContainer = styled.div`

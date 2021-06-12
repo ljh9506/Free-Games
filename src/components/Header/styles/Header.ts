@@ -3,7 +3,7 @@ import { GiPresent } from 'react-icons/gi';
 import { VscLibrary } from 'react-icons/vsc';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 type PropType = {
   isOpen?: boolean;
@@ -16,7 +16,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
-  max-width: 1024px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 12px 0;
   position: relative;
@@ -55,12 +55,13 @@ export const ListContainer = styled.ul`
   }
 `;
 
-export const List = styled.li`
+export const List = styled(Link)`
   color: white;
   margin-right: 12px;
   display: flex;
   align-items: center;
   position: relative;
+  text-decoration: none;
 
   &:last-of-type {
     position: relative;
@@ -109,6 +110,7 @@ export const FuncContainer = styled.ul`
   list-style: none;
   display: flex;
   margin-left: auto;
+  margin-right: 12px;
 
   @media screen and (max-width: 1052px) {
     display: none;

@@ -1,4 +1,3 @@
-import GameFilter from '../components/GameFilter';
 import GameList from '../components/GameList';
 
 const Home = () => {

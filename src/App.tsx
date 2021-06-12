@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import GlobalStyles from './GlobalStyles';
 import Home from './pages/Home';
+import Detail from './pages/Detail';
 
 const App = (): ReactElement => {
   return (
@@ -12,8 +13,11 @@ const App = (): ReactElement => {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/">
+          <Route path="/game" exact>
             <Home />
+          </Route>
+          <Route path="/game/:id">
+            <Detail />
           </Route>
         </Switch>
         <Footer />
