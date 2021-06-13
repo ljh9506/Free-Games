@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Free-Games/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/Free-Games/static/js/main.a130139a.chunk.js",
-    "main.js.map": "/Free-Games/static/js/main.a130139a.chunk.js.map",
+    "main.js": "/Free-Games/static/js/main.e689f303.chunk.js",
+    "main.js.map": "/Free-Games/static/js/main.e689f303.chunk.js.map",
     "runtime-main.js": "/Free-Games/static/js/runtime-main.4ec3adfc.js",
     "runtime-main.js.map": "/Free-Games/static/js/runtime-main.4ec3adfc.js.map",
     "static/js/2.d9a7e8ee.chunk.js": "/Free-Games/static/js/2.d9a7e8ee.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.4ec3adfc.js",
     "static/js/2.d9a7e8ee.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.a130139a.chunk.js"
+    "static/js/main.e689f303.chunk.js"
   ]
 }
