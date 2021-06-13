@@ -16,7 +16,9 @@ export const PageWrapper = styled.div``;
 
 export const Page = styled(Link)`
   text-decoration: none;
-  padding: 18px;
+  padding: 9px 18px;
   font-size: 28px;
+  background-color: ${({ clicked }: Props) => (clicked ? '#aaaaaa' : '')};
+  border-radius: 4px;
   color: ${({ clicked }: Props) => (clicked ? '#111' : '#aaaaaa')};
 `;

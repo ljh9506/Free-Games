@@ -13,7 +13,7 @@ const App = (): ReactElement => {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/game" exact>
+          <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/game/:id">

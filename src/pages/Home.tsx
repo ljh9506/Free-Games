@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import GameList from '../components/GameList';
 
-const Home = () => {
+const Home = (): ReactElement => {
   return (
     <main>
       <GameList />

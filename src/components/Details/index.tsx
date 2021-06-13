@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ReactElement, useState } from 'react';
 import { FaCrown } from 'react-icons/fa';
 import { IoMdPerson, IoMdChatboxes } from 'react-icons/io';
 import { BsArrowDown } from 'react-icons/bs';
@@ -22,7 +22,6 @@ import {
   RateSection,
   RightBtn,
   RightContent,
-  SamllText,
   SmallIcon,
   SmileIcon,
   Title,
@@ -43,10 +42,11 @@ import {
   Screenshots,
   ImgWrap,
   GameImage,
+  SmallText,
 } from './styles/Details';
 import useFetchDetail from '../../hooks/useFetchDetail';
 
-const Details = () => {
+const Details = (): ReactElement => {
   const [readMore, setReadMore] = useState<boolean>(false);
   const { id } = useParams<{ id: string }>();
   const { details, err } = useFetchDetail(id);
@@ -70,23 +70,23 @@ const Details = () => {
               </Button>
               <Button>
                 <FaceIcon />
-                <Count>30</Count>
+                <Count>7</Count>
                 <Title>MEH</Title>
               </Button>
               <Button>
                 <AngryIcon />
-                <Count>30</Count>
+                <Count>13</Count>
                 <Title>DISLIKE</Title>
               </Button>
               <Button>
                 <PlusIcon />
-                <Count>30</Count>
+                <Count>7</Count>
                 <Title>ADD</Title>
               </Button>
             </RateSection>
-            <SamllText>
+            <SmallText>
               <SmallIcon /> Requires 3rd-Party Account
-            </SamllText>
+            </SmallText>
           </ContentWrapper>
         </LeftContent>
         <RightContent>

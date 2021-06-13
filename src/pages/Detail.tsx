@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import Details from '../components/Details';
 
-const Detail = () => {
+const Detail = (): ReactElement => {
   return (
     <>
       <Details />

@@ -22,7 +22,7 @@ type Props = {
 function Spinner({ isLoading }: Props) {
   return (
     <div className="spinner_wrap">
-      <Clock color="#4799eb" css={isLoading ? show : hide} size={50} />
+      <Clock color="#4799eb" css={isLoading ? show : hide} size={30} />
     </div>
   );
 }

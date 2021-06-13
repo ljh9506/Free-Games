@@ -26,21 +26,21 @@ const Sidebar = ({
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="/" onClick={() => setSidebarOpen(!isOpen)}>
+          <SidebarLink to="/game" onClick={() => setSidebarOpen(!isOpen)}>
             Game List
           </SidebarLink>
-          <SidebarLink to="/" onClick={() => setSidebarOpen(!isOpen)}>
+          <SidebarLink to="/game" onClick={() => setSidebarOpen(!isOpen)}>
             Special Offers
           </SidebarLink>
-          <SidebarLink to="/" onClick={() => setSidebarOpen(!isOpen)}>
+          <SidebarLink to="/game" onClick={() => setSidebarOpen(!isOpen)}>
             Top 2021
           </SidebarLink>
-          <SidebarLink to="/" onClick={() => setSidebarOpen(!isOpen)}>
+          <SidebarLink to="/game" onClick={() => setSidebarOpen(!isOpen)}>
             About
           </SidebarLink>
         </SidebarMenu>
         <SidebarWrap>
-          <SidebarRoute to="/" onClick={() => setSidebarOpen(!isOpen)}>
+          <SidebarRoute to="/game" onClick={() => setSidebarOpen(!isOpen)}>
             Sign Up
           </SidebarRoute>
         </SidebarWrap>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { GrWindows } from 'react-icons/gr';
 import { GoBrowser } from 'react-icons/go';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import {
   backgroundColor,
   primaryTextColor,

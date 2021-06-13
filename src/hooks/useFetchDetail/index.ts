@@ -23,7 +23,6 @@ const useFetchDetail = (id: string): Response => {
       })
       .then((res) => {
         setDetails(res.data);
-        console.log(res.data);
       })
       .catch((e) => {
         setErr(e.message);

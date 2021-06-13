@@ -15,6 +15,7 @@ const useFetch = (params: Filter): Response => {
   const [err, setErr] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const { platform, genre, tag, sortBy } = params;
+
   useEffect(() => {
     setIsLoading(true);
     axios

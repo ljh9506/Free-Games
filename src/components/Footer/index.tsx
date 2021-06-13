@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import { FooterContainer, FooterWrapper, Row, Col } from './styles/Footer';
 
-const Footer = () => {
+const Footer = (): ReactElement => {
   return (
     <FooterWrapper>
       <FooterContainer>

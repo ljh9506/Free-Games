@@ -20,17 +20,19 @@ export const DetailContainer = styled.div`
 
 export const LeftContent = styled.div`
   padding: 0 10px;
+
+  @media screen and (max-width: 1052px) {
+    padding: 0;
+  }
 `;
 
 export const RightContent = styled.div`
   width: 70%;
   padding: 0 10px;
-  margin-left: 12px;
 
   @media screen and (max-width: 1052px) {
-    width: 100%;
-    margin: 0;
     padding: 0;
+    width: 100%;
   }
 `;
 
@@ -84,7 +86,7 @@ export const RightBtn = styled.a`
 
   &:hover {
     cursor: pointer;
-    filter: brightness(1.2);
+    filter: brightness(0.9);
     transition: 0.2s ease-in-out;
   }
 `;
@@ -140,8 +142,12 @@ export const Title = styled.span`
   font-weight: bold;
 `;
 
-export const SamllText = styled.p`
+export const SmallText = styled.p`
   color: #aaaaaa;
+
+  @media screen and (max-width: 1052px) {
+    padding-left: 12px;
+  }
 `;
 
 export const SmallIcon = styled(BsFillPersonFill)`
@@ -150,6 +156,10 @@ export const SmallIcon = styled(BsFillPersonFill)`
 
 export const BreacdCrumb = styled.div`
   display: flex;
+
+  @media screen and (max-width: 1052px) {
+    padding-left: 12px;
+  }
 `;
 
 export const BLink = styled(Link)`
@@ -160,6 +170,10 @@ export const BLink = styled(Link)`
 export const GameTitle = styled.h1`
   color: #aaaaaa;
   margin: 10px 0;
+
+  @media screen and (max-width: 1052px) {
+    padding: 0 12px;
+  }
 `;
 
 export const InfoSection = styled.div`
@@ -175,6 +189,10 @@ export const TextField = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+
+  @media screen and (max-width: 1052px) {
+    padding: 0 12px;
+  }
 `;
 
 export const TextList = styled.span`
@@ -207,6 +225,10 @@ export const TextListWrap = styled.div`
 
 export const ChartImage = styled.img`
   height: 180px;
+
+  @media screen and (max-width: 1052px) {
+    height: 120px;
+  }
 `;
 
 export const About = styled.h2`
@@ -214,14 +236,17 @@ export const About = styled.h2`
   font-size: 32px;
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 12px;
+
+  @media screen and (max-width: 1052px) {
+    padding-left: 12px;
+  }
 `;
 
 export const Description = styled.p`
   color: #aaaaaa;
   font-size: 18px;
   line-height: 32px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid #aaaaaa;
+  padding: 24px 12px;
 `;
 
 export const ReadMore = styled.span`
@@ -239,11 +264,16 @@ export const AddInfo = styled.h2`
   font-size: 32px;
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 12px;
+
+  @media screen and (max-width: 1052px) {
+    padding-left: 12px;
+  }
 `;
 
 export const InfoWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 12px;
 `;
 
 export const Info = styled.div`
@@ -265,6 +295,10 @@ export const Screenshots = styled.h2`
   font-size: 32px;
   border-bottom: 1px solid #aaaaaa;
   padding-bottom: 12px;
+
+  @media screen and (max-width: 1052px) {
+    padding-left: 12px;
+  }
 `;
 
 export const ImgWrap = styled.div`

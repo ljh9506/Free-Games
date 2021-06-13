@@ -5,6 +5,7 @@ import { primaryColor } from './styles/themes';
 const GlobalStyles = createGlobalStyle`
     html {
         height : 100%;
+        box-sizing: border-box;
     }
     body {
         height: 100%;
